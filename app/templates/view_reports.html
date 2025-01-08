@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>View Reports</h1>
+    <ul>
+        {% for report in reports %}
+            <li>
+                <h3>{{ report[1] }}</h3>
+                <p>{{ report[2] }}</p>
+                <img src="{{ url_for('static', filename='uploads/' + report[3]) }}" alt="Report Image">
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

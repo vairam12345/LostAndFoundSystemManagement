@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+    <p>Welcome {{ session['username'] }}!</p>
+    <a href="{{ url_for('report.upload_report') }}">Upload a report</a>
+    <a href="{{ url_for('report.view_reports') }}">View reports</a>
+{% endblock %}
